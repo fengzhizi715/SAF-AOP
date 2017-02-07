@@ -9,7 +9,6 @@ import org.aspectj.lang.annotation.Pointcut;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.Arrays;
 
 /**
  * Created by Tony Shen on 16/3/23.
@@ -32,7 +31,6 @@ public class SafeAspect {
         try {
             result = joinPoint.proceed(joinPoint.getArgs());
         } catch (Throwable e) {
-            L.w(joinPoint.getSignature().toShortString() + (joinPoint.getArgs() != null ? Arrays.deepToString(joinPoint.getArgs()) : ""));
             L.w(getStringFromException(e));
         }
         return result;
