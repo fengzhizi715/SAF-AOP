@@ -47,4 +47,11 @@ public class MainActivity extends Activity {
         Intent i = new Intent(MainActivity.this,DemoForSafeActivity.class);
         startActivity(i);
     }
+
+    @OnClick(id={R.id.text7})
+    void clickText7() {
+
+        Intent i = new Intent(MainActivity.this,DemoForTraceActivity.class);
+        startActivity(i);
+    }
 }
