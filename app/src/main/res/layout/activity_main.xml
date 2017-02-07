@@ -4,4 +4,67 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/textview_border"
+        android:gravity="center"
+        android:text="\@Async的使用"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/textview_border"
+        android:gravity="center"
+        android:text="\@Cacheable的使用"/>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/textview_border"
+        android:gravity="center"
+        android:text="\@LogMethod的使用"/>
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/textview_border"
+        android:gravity="center"
+        android:text="\@HookMethod的使用"/>
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/textview_border"
+        android:gravity="center"
+        android:text="\@Prefs的使用"/>
+
+    <TextView
+        android:id="@+id/text6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/textview_border"
+        android:gravity="center"
+        android:text="\@Safe的使用"/>
+
+    <TextView
+        android:id="@+id/text7"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/textview_border"
+        android:gravity="center"
+        android:text="\@Trace的使用"/>
+
 </LinearLayout>

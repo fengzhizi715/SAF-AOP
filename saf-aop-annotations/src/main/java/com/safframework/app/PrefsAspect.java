@@ -25,7 +25,7 @@ public class PrefsAspect {
         return prefsMethod(joinPoint);
     }
 
-    @Pointcut("@within(com.safframework.aop.annotation.Prefs)||@annotation(com.safframework.aop.annotation.Prefs)")
+    @Pointcut("@within(com.safframework.app.annotation.Prefs)||@annotation(com.safframework.app.annotation.Prefs)")
     public void onPrefsMethod() {
     }
 

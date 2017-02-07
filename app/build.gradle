@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.hujiang.android-aspectjx'
+apply plugin: 'com.neenbedankt.android-apt'
 
 android {
     compileSdkVersion 25
@@ -17,6 +19,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    // 多个jar包里包含了同样的文件（NOTICE.txt）,导致打包时因为担心相互覆盖问题而提示出错, 去掉这2个文件
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    compileOptions {
+        sourceCompatibility = "1.7"
+        targetCompatibility = "1.7"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -26,4 +43,9 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.1.1'
     testCompile 'junit:junit:4.12'
+
+    compile project(':saf-aop-annotations')
+
+    compile 'com.safframework.injectview:saf-injectview:1.0.0'
+    apt 'com.safframework.injectview:saf-injectview-compiler:1.0.0'
 }

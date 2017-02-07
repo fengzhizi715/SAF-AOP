@@ -19,7 +19,7 @@ public class TraceAspect {
         return traceMethod(joinPoint);
     }
 
-    @Pointcut("@within(com.safframework.aop.annotation.Trace)||@annotation(com.safframework.aop.annotation.Trace)")
+    @Pointcut("@within(com.safframework.app.annotation.Trace)||@annotation(com.safframework.app.annotation.Trace)")
     public void onTraceMethod() {
     }
 

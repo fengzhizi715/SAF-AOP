@@ -1,1 +1,2 @@
-include ':app', ':saf-aop-annotations'
+include ':app'
+include ':saf-aop-annotations'

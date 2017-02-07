@@ -26,7 +26,7 @@ public class CacheAspect {
         return cacheMethod(joinPoint);
     }
 
-    @Pointcut("@within(com.safframework.aop.annotation.Cacheable)||@annotation(com.safframework.aop.annotation.Cacheable)")
+    @Pointcut("@within(com.safframework.app.annotation.Cacheable)||@annotation(com.safframework.app.annotation.Cacheable)")
     public void onCacheMethod() {
     }
 

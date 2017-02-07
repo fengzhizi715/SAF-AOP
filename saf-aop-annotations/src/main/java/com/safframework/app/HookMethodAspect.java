@@ -26,7 +26,7 @@ public class HookMethodAspect {
         hookMethod(joinPoint);
     }
 
-    @Pointcut("@within(com.safframework.aop.annotation.HookMethod)||@annotation(com.safframework.aop.annotation.HookMethod)")
+    @Pointcut("@within(com.safframework.app.annotation.HookMethod)||@annotation(com.safframework.app.annotation.HookMethod)")
     public void onHookMethod() {
     }
 
