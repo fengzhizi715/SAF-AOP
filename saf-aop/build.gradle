@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.hujiang.android-aspectjx'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 25
@@ -19,6 +20,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -34,4 +38,30 @@ dependencies {
     compile 'com.safframework.log:saf-log:1.0.4'
     compile 'com.safframework:saf-cache:1.0.1'
     compile 'tony-common:tony-common-utils:1.0.1'
+}
+
+repositories {
+    jcenter()
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+    //加上这些
+    tasks.withType(Javadoc) {
+        options{ encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+    }
+}
+
+publish{
+    userOrg = 'fengzhizi715'
+    groupId = 'com.safframework'
+    artifactId = 'saf-aop'
+    publishVersion = '1.0.0'
+    desc = 'this is an aop library for android'
+    website = 'https://github.com/fengzhizi715/SAF-AOP'
 }
