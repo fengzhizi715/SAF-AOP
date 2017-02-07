@@ -26,10 +26,10 @@ public class LogMethodAspect {
     }
 
     private Object logMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
-        L.w("--> " + joinPoint.getSignature().toShortString() + " Args : " + (joinPoint.getArgs() != null ? Arrays.deepToString(joinPoint.getArgs()) : ""));
+        L.w(joinPoint.getSignature().toShortString() + " Args : " + (joinPoint.getArgs() != null ? Arrays.deepToString(joinPoint.getArgs()) : ""));
         Object result = joinPoint.proceed();
         String type = ((MethodSignature) joinPoint.getSignature()).getReturnType().toString();
-        L.w("<-- " + joinPoint.getSignature().toShortString() + " Result : " + ("void".equalsIgnoreCase(type)?"void":result));
+        L.w(joinPoint.getSignature().toShortString() + " Result : " + ("void".equalsIgnoreCase(type)?"void":result));
         return result;
     }
 }

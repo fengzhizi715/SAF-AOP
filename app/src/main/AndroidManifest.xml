@@ -30,10 +30,15 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".DemoForLogMethodActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
 
-
-
-
+        <activity
+            android:name=".DemoForHookMethodActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
 
 
 

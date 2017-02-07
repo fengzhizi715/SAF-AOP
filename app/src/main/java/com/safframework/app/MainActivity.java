@@ -27,6 +27,19 @@ public class MainActivity extends Activity {
         startActivity(i);
     }
 
+    @OnClick(id={R.id.text3})
+    void clickText3() {
+
+        Intent i = new Intent(MainActivity.this,DemoForLogMethodActivity.class);
+        startActivity(i);
+    }
+
+    @OnClick(id={R.id.text4})
+    void clickText4() {
+
+        Intent i = new Intent(MainActivity.this,DemoForHookMethodActivity.class);
+        startActivity(i);
+    }
 
     @OnClick(id={R.id.text6})
     void clickText6() {
