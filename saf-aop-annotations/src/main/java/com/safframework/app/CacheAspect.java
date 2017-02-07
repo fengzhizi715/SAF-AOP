@@ -1,8 +1,8 @@
-package com.safframework.aop;
+package com.safframework.app;
 
 import android.annotation.TargetApi;
 
-import com.safframework.aop.annotation.Cacheable;
+import com.safframework.app.annotation.Cacheable;
 import com.safframework.cache.Cache;
 
 import org.aspectj.lang.ProceedingJoinPoint;

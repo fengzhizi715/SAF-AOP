@@ -1,4 +1,4 @@
-package com.safframework.aop;
+package com.safframework.app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,8 +1,8 @@
-package com.safframework.aop;
+package com.safframework.app;
 
 import android.annotation.TargetApi;
 
-import com.safframework.aop.annotation.Prefs;
+import com.safframework.app.annotation.Prefs;
 import com.safframework.prefs.AppPrefs;
 
 import org.aspectj.lang.ProceedingJoinPoint;

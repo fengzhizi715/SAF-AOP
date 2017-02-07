@@ -1,6 +1,6 @@
-package com.safframework.aop;
+package com.safframework.app;
 
-import com.safframework.aop.annotation.HookMethod;
+import com.safframework.app.annotation.HookMethod;
 import com.safframework.log.L;
 import com.safframwork.tony.common.reflect.Reflect;
 import com.safframwork.tony.common.reflect.ReflectException;

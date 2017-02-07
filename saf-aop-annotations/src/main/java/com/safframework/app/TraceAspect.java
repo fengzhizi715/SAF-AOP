@@ -1,4 +1,4 @@
-package com.safframework.aop;
+package com.safframework.app;
 
 import com.safframework.log.L;
 
