@@ -27,6 +27,13 @@ public class MainActivity extends Activity {
         startActivity(i);
     }
 
+    @OnClick(id={R.id.text2})
+    void clickText2() {
+
+        Intent i = new Intent(MainActivity.this,DemoForCacheableActivity.class);
+        startActivity(i);
+    }
+
     @OnClick(id={R.id.text3})
     void clickText3() {
 
