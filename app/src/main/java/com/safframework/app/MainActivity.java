@@ -48,6 +48,13 @@ public class MainActivity extends Activity {
         startActivity(i);
     }
 
+    @OnClick(id={R.id.text5})
+    void clickText5() {
+
+        Intent i = new Intent(MainActivity.this,DemoForPrefsActivity.class);
+        startActivity(i);
+    }
+
     @OnClick(id={R.id.text6})
     void clickText6() {
 

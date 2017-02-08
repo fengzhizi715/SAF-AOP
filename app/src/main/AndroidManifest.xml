@@ -40,7 +40,10 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
 
-
+        <activity
+            android:name=".DemoForPrefsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".DemoForSafeActivity"
