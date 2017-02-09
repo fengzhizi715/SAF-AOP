@@ -1,5 +1,31 @@
 # SAF-AOP
 
+# 下载安装
+
+在根目录下的build.gradle中添加
+```groovy
+buildscript {
+     repositories {
+         jcenter()
+     }
+     dependencies {
+         classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:1.0.8'
+     }
+ }
+```
+
+在app 模块目录下的build.gradle中添加
+```groovy
+apply plugin: 'com.hujiang.android-aspectjx'
+
+...
+
+dependencies {
+    compile 'com.safframework:saf-aop:1.0.0'
+    ...
+}
+```
+
 基于aspectj的AOP，无需使用耗费性能的反射.不过,需要在build.gradle中配置一下aspectj
 
 
