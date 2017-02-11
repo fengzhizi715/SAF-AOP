@@ -6,6 +6,7 @@ import android.os.Looper;
 import android.widget.Toast;
 
 import com.safframework.app.annotation.Async;
+import com.safframework.log.L;
 
 /**
  * Created by Tony Shen on 2017/2/7.
@@ -31,5 +32,6 @@ public class DemoForAsyncActivity extends Activity {
 
 
         Toast.makeText(DemoForAsyncActivity.this, sb.toString(), Toast.LENGTH_SHORT).show();
+        L.i(sb.toString());
     }
 }

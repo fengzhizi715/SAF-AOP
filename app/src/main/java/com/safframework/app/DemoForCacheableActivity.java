@@ -9,6 +9,7 @@ import com.safframework.app.domain.Address;
 import com.safframework.cache.Cache;
 import com.safframework.injectview.Injector;
 import com.safframework.injectview.annotations.OnClick;
+import com.safframework.log.L;
 import com.safframwork.tony.common.utils.StringUtils;
 
 /**
@@ -44,5 +45,6 @@ public class DemoForCacheableActivity extends Activity {
         Cache cache = Cache.get(this);
         Address address = (Address) cache.getObject("address");
         Toast.makeText(this, StringUtils.printObject(address),Toast.LENGTH_SHORT).show();
+        L.json(address);
     }
 }
