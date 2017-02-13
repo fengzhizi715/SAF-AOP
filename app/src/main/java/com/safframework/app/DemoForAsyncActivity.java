@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.widget.Toast;
 
-import com.safframework.app.annotation.Async;
+import com.safframework.aop.annotation.Async;
 import com.safframework.log.L;
 
 /**

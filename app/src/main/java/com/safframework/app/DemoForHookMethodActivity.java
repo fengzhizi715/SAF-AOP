@@ -3,7 +3,7 @@ package com.safframework.app;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.safframework.app.annotation.HookMethod;
+import com.safframework.aop.annotation.HookMethod;
 import com.safframework.log.L;
 
 /**

@@ -1,4 +1,4 @@
-package com.safframework.app.annotation;
+package com.safframework.aop.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
@@ -11,5 +11,5 @@ import static java.lang.annotation.RetentionPolicy.CLASS;
  */
 @Target({METHOD})
 @Retention(CLASS)
-public @interface Safe {
+public @interface Async {
 }

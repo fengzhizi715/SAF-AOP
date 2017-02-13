@@ -1,4 +1,4 @@
-package com.safframework.app.annotation;
+package com.safframework.aop.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

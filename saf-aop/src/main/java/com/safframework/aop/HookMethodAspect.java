@@ -1,6 +1,6 @@
-package com.safframework.app;
+package com.safframework.aop;
 
-import com.safframework.app.annotation.HookMethod;
+import com.safframework.aop.annotation.HookMethod;
 import com.safframework.log.L;
 import com.safframwork.tony.common.reflect.Reflect;
 import com.safframwork.tony.common.reflect.ReflectException;
@@ -26,7 +26,7 @@ public class HookMethodAspect {
         hookMethod(joinPoint);
     }
 
-    @Pointcut("@within(com.safframework.app.annotation.HookMethod)||@annotation(com.safframework.app.annotation.HookMethod)")
+    @Pointcut("@within(com.safframework.aop.annotation.HookMethod)||@annotation(com.safframework.aop.annotation.HookMethod)")
     public void onHookMethod() {
     }
 

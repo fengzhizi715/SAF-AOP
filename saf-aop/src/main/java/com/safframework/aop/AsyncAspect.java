@@ -1,4 +1,4 @@
-package com.safframework.app;
+package com.safframework.aop;
 
 import android.os.Looper;
 
@@ -23,7 +23,7 @@ public class AsyncAspect {
         asyncMethod(joinPoint);
     }
 
-    @Pointcut("@within(com.safframework.app.annotation.Async)||@annotation(com.safframework.app.annotation.Async)")
+    @Pointcut("@within(com.safframework.aop.annotation.Async)||@annotation(com.safframework.aop.annotation.Async)")
     public void onAsyncMethod() {
     }
 

@@ -1,8 +1,8 @@
-package com.safframework.app;
+package com.safframework.aop;
 
 import android.annotation.TargetApi;
 
-import com.safframework.app.annotation.Prefs;
+import com.safframework.aop.annotation.Prefs;
 import com.safframework.prefs.AppPrefs;
 
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -25,7 +25,7 @@ public class PrefsAspect {
         return prefsMethod(joinPoint);
     }
 
-    @Pointcut("@within(com.safframework.app.annotation.Prefs)||@annotation(com.safframework.app.annotation.Prefs)")
+    @Pointcut("@within(com.safframework.aop.annotation.Prefs)||@annotation(com.safframework.aop.annotation.Prefs)")
     public void onPrefsMethod() {
     }
 

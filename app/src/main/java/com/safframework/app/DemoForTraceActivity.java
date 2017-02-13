@@ -3,7 +3,7 @@ package com.safframework.app;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.safframework.app.annotation.Trace;
+import com.safframework.aop.annotation.Trace;
 
 import java.util.HashMap;
 import java.util.Map;

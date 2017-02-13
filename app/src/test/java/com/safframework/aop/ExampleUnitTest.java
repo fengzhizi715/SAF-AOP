@@ -1,4 +1,4 @@
-package com.safframework.app;
+package com.safframework.aop;
 
 import org.junit.Test;
 

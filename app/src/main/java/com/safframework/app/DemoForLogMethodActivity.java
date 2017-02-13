@@ -3,7 +3,7 @@ package com.safframework.app;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.safframework.app.annotation.LogMethod;
+import com.safframework.aop.annotation.LogMethod;
 import com.safframework.app.domain.User;
 
 /**

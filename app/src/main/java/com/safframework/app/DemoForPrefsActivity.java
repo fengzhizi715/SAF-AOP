@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.safframework.app.annotation.Prefs;
+import com.safframework.aop.annotation.Prefs;
 import com.safframework.app.domain.Article;
 import com.safframework.injectview.Injector;
 import com.safframework.injectview.annotations.OnClick;

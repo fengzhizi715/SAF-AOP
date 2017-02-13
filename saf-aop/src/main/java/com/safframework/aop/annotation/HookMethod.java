@@ -1,4 +1,4 @@
-package com.safframework.app.annotation;
+package com.safframework.aop.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
@@ -7,9 +7,13 @@ import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.RetentionPolicy.CLASS;
 
 /**
- * Created by Tony Shen on 16/3/22.
+ * Created by Tony Shen on 2016/12/7.
  */
 @Target({METHOD})
 @Retention(CLASS)
-public @interface LogMethod {
+public @interface HookMethod {
+
+    String beforeMethod() default "";
+
+    String afterMethod() default "";
 }

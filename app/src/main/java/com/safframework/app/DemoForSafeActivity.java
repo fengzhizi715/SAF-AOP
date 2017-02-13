@@ -3,7 +3,7 @@ package com.safframework.app;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.safframework.app.annotation.Safe;
+import com.safframework.aop.annotation.Safe;
 
 /**
  * Created by Tony Shen on 2017/2/7.

@@ -1,8 +1,8 @@
-package com.safframework.app;
+package com.safframework.aop;
 
 import android.annotation.TargetApi;
 
-import com.safframework.app.annotation.Cacheable;
+import com.safframework.aop.annotation.Cacheable;
 import com.safframework.cache.Cache;
 
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -26,7 +26,7 @@ public class CacheAspect {
         return cacheMethod(joinPoint);
     }
 
-    @Pointcut("@within(com.safframework.app.annotation.Cacheable)||@annotation(com.safframework.app.annotation.Cacheable)")
+    @Pointcut("@within(com.safframework.aop.annotation.Cacheable)||@annotation(com.safframework.aop.annotation.Cacheable)")
     public void onCacheMethod() {
     }
 

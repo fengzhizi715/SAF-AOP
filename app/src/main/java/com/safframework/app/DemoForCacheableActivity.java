@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.safframework.app.annotation.Cacheable;
+import com.safframework.aop.annotation.Cacheable;
 import com.safframework.app.domain.Address;
 import com.safframework.cache.Cache;
 import com.safframework.injectview.Injector;

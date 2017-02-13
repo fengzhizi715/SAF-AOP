@@ -1,4 +1,4 @@
-package com.safframework.app;
+package com.safframework.aop;
 
 import com.safframework.log.L;
 
@@ -21,7 +21,7 @@ public class SafeAspect {
         return safeMethod(joinPoint);
     }
 
-    @Pointcut("@within(com.safframework.app.annotation.Safe)||@annotation(com.safframework.app.annotation.Safe)")
+    @Pointcut("@within(com.safframework.aop.annotation.Safe)||@annotation(com.safframework.aop.annotation.Safe)")
     public void onSafe() {
     }
 
