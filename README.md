@@ -97,6 +97,11 @@ beforeMethod和afterMethod对应的都是方法名，分别表示在调用doSome
    }
 ```
 
+
+ChangeLog
+===
+[版本更新记录](CHANGELOG.md)
+
 License
 -------
 
