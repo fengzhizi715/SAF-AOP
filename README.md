@@ -4,6 +4,8 @@
 [![GitHub release](https://img.shields.io/badge/release-v1.0.1-blue.svg)](https://github.com/fengzhizi715/SAF-AOP/releases)
 [![License](https://img.shields.io/badge/license-Apache%202-lightgrey.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
+![](logo.png)
+
 # 下载安装
 
 在根目录下的build.gradle中添加
