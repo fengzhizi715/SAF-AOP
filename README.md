@@ -103,6 +103,11 @@ beforeMethod和afterMethod对应的都是方法名，分别表示在调用doSome
    }
 ```
 
+Proguard
+===
+```java
+-keep class com.safframework.aop.** { *; }
+```
 
 ChangeLog
 ===
