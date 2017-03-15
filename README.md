@@ -1,8 +1,8 @@
 # SAF-AOP
 
 [![@Tony沈哲 on weibo](https://img.shields.io/badge/weibo-%40Tony%E6%B2%88%E5%93%B2-blue.svg)](http://www.weibo.com/fengzhizi715)
-[![Download](https://img.shields.io/badge/Download-1.0.2-red.svg)](https://bintray.com/fengzhizi715/maven/saf-aop/_latestVersion)
-[![GitHub release](https://img.shields.io/badge/release-1.0.2-blue.svg)](https://github.com/fengzhizi715/SAF-AOP/releases)
+[![Download](https://img.shields.io/badge/Download-1.1.0-red.svg)](https://bintray.com/fengzhizi715/maven/saf-aop/_latestVersion)
+[![GitHub release](https://img.shields.io/badge/release-1.1.0-blue.svg)](https://github.com/fengzhizi715/SAF-AOP/releases)
 [![License](https://img.shields.io/badge/license-Apache%202-lightgrey.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 ![](logo.png)
@@ -28,7 +28,7 @@ apply plugin: 'com.hujiang.android-aspectjx'
 ...
 
 dependencies {
-    compile 'com.safframework:saf-aop:1.0.2'
+    compile 'com.safframework:saf-aop:1.1.0'
     ...
 }
 ```
