@@ -4,7 +4,7 @@ apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "25.0.0"
 
     defaultConfig {
         minSdkVersion 9
@@ -30,11 +30,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
     compile 'org.aspectj:aspectjrt:1.8.+'
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.0'
-    compile 'io.reactivex.rxjava2:rxjava:2.0.6'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.7'
     compile 'com.safframework.log:saf-log:1.0.5'
     compile 'com.safframework:saf-cache:1.0.1'
     compile 'tony-common:tony-common-utils:1.0.1'
@@ -61,7 +61,7 @@ publish{
     userOrg = 'fengzhizi715'
     groupId = 'com.safframework'
     artifactId = 'saf-aop'
-    publishVersion = '1.0.2'
+    publishVersion = '1.1.0'
     desc = 'this is an aop library for android'
     website = 'https://github.com/fengzhizi715/SAF-AOP'
 }
