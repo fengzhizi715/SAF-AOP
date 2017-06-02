@@ -34,10 +34,10 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'org.aspectj:aspectjrt:1.8.+'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile 'io.reactivex.rxjava2:rxjava:2.0.7'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
     compile 'com.safframework.log:saf-log:1.0.5'
     compile 'com.safframework:saf-cache:1.0.1'
-    compile 'tony-common:tony-common-utils:1.0.1'
+    compile 'tony-common:tony-common-utils:1.1.0'
 }
 
 repositories {
@@ -61,7 +61,7 @@ publish{
     userOrg = 'fengzhizi715'
     groupId = 'com.safframework'
     artifactId = 'saf-aop'
-    publishVersion = '1.1.0'
+    publishVersion = '1.1.1'
     desc = 'this is an aop library for android'
     website = 'https://github.com/fengzhizi715/SAF-AOP'
 }

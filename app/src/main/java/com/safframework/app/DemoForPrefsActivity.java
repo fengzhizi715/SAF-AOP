@@ -9,7 +9,7 @@ import com.safframework.app.domain.Article;
 import com.safframework.injectview.Injector;
 import com.safframework.injectview.annotations.OnClick;
 import com.safframework.prefs.AppPrefs;
-import com.safframwork.tony.common.utils.StringUtils;
+import com.safframework.tony.common.utils.StringUtils;
 
 /**
  * Created by Tony Shen on 2017/2/8.

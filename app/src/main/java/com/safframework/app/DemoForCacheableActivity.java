@@ -10,7 +10,7 @@ import com.safframework.cache.Cache;
 import com.safframework.injectview.Injector;
 import com.safframework.injectview.annotations.OnClick;
 import com.safframework.log.L;
-import com.safframwork.tony.common.utils.StringUtils;
+import com.safframework.tony.common.utils.StringUtils;
 
 /**
  * Created by Tony Shen on 2017/2/7.
