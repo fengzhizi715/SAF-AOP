@@ -4,6 +4,7 @@
 [![Download](https://img.shields.io/badge/Download-1.1.1-red.svg)](https://bintray.com/fengzhizi715/maven/saf-aop/_latestVersion)
 [![GitHub release](https://img.shields.io/badge/release-1.1.1-blue.svg)](https://github.com/fengzhizi715/SAF-AOP/releases)
 [![License](https://img.shields.io/badge/license-Apache%202-lightgrey.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
+<a href="http://www.methodscount.com/?lib=com.safframework%3Asaf-aop%3A1.1.1"><img src="https://img.shields.io/badge/Methods and size-core: 106 | deps: 43016 | 28 KB-e91e63.svg"/></a>
 
 ![](logo.png)
 
