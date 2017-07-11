@@ -70,7 +70,7 @@ dependencies {
 	}
 ```
 
-这里的@Cacheable,实际上用到[Cache](https://github.com/fengzhizi715/SAF#cache),要获取Cache也很简单.
+这里的@Cacheable,实际上用到[Cache](https://github.com/fengzhizi715/SAF/blob/master/docs/cache.md),要获取Cache也很简单.
 
 @Trace的使用方法:
 ---
