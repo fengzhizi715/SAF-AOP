@@ -5,8 +5,11 @@ import android.os.Bundle;
 
 import com.safframework.aop.annotation.Trace;
 
-import java.util.HashMap;
-import java.util.Map;
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.annotations.NonNull;
+import io.reactivex.functions.Consumer;
 
 /**
  * Created by Tony Shen on 2017/2/7.
@@ -24,11 +27,24 @@ public class DemoForTraceActivity extends Activity{
     @Trace
     private void initData() {
 
-        for (int i=0;i<10000;i++) {
-            Map map = new HashMap();
-            map.put("name","tony");
-            map.put("age","18");
-            map.put("gender","male");
-        }
+        Observable.create(new ObservableOnSubscribe<String>() {
+
+            @Trace
+            @Override
+            public void subscribe(@NonNull ObservableEmitter<String> e) throws Exception {
+
+                e.onNext("111");
+                e.onNext("222");
+                e.onNext("333");
+
+            }
+        }).subscribe(new Consumer<String>() {
+
+            @Trace
+            @Override
+            public void accept(@NonNull String str) throws Exception {
+
+            }
+        });
     }
 }
