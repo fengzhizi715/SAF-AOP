@@ -20,14 +20,14 @@ public class TraceAspect {
     private static final String POINTCUT_CONSTRUCTOR = "execution(@com.safframework.aop.annotation.Trace *.new(..))";
 
     @Pointcut(POINTCUT_METHOD)
-    public void methodAnnotatedWithDebugTrace() {
+    public void methodAnnotatedWithTrace() {
     }
 
     @Pointcut(POINTCUT_CONSTRUCTOR)
-    public void constructorAnnotatedDebugTrace() {
+    public void constructorAnnotatedTrace() {
     }
-    
-    @Around("methodAnnotatedWithDebugTrace() || constructorAnnotatedDebugTrace()")
+
+    @Around("methodAnnotatedWithTrace() || constructorAnnotatedTrace()")
     public Object traceMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         String className = methodSignature.getDeclaringType().getSimpleName();
