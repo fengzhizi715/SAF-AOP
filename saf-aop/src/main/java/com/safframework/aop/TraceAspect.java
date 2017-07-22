@@ -1,6 +1,7 @@
 package com.safframework.aop;
 
 import com.safframework.log.L;
+import com.safframework.tony.common.utils.Preconditions;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -14,16 +15,20 @@ import org.aspectj.lang.reflect.MethodSignature;
 @Aspect
 public class TraceAspect {
 
-    @Around("execution(!synthetic * *(..)) && onTraceMethod()")
-    public Object doTraceMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
-        return traceMethod(joinPoint);
+    private static final String POINTCUT_METHOD = "execution(@com.safframework.aop.annotation.Trace * *(..))";
+
+    private static final String POINTCUT_CONSTRUCTOR = "execution(@com.safframework.aop.annotation.Trace *.new(..))";
+
+    @Pointcut(POINTCUT_METHOD)
+    public void methodAnnotatedWithDebugTrace() {
     }
 
-    @Pointcut("@within(com.safframework.aop.annotation.Trace)||@annotation(com.safframework.aop.annotation.Trace)")
-    public void onTraceMethod() {
+    @Pointcut(POINTCUT_CONSTRUCTOR)
+    public void constructorAnnotatedDebugTrace() {
     }
-
-    private Object traceMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
+    
+    @Around("methodAnnotatedWithDebugTrace() || constructorAnnotatedDebugTrace()")
+    public Object traceMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         String className = methodSignature.getDeclaringType().getSimpleName();
         String methodName = methodSignature.getName();
@@ -31,6 +36,10 @@ public class TraceAspect {
         stopWatch.start();
         Object result = joinPoint.proceed();
         stopWatch.stop();
+
+        if (Preconditions.isBlank(className)) {
+            className = "Anonymous class";
+        }
 
         L.i(className, buildLogMessage(methodName, stopWatch.getTotalTimeMillis()));
 
