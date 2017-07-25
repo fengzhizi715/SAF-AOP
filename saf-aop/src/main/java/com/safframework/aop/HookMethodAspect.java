@@ -21,16 +21,20 @@ import java.lang.reflect.Method;
 @Aspect
 public class HookMethodAspect {
 
-    @Around("execution(!synthetic * *(..)) && onHookMethod()")
-    public void doHookMethodd(final ProceedingJoinPoint joinPoint) throws Throwable {
-        hookMethod(joinPoint);
+    private static final String POINTCUT_METHOD = "execution(@com.safframework.aop.annotation.HookMethod * *(..))";
+
+    private static final String POINTCUT_CONSTRUCTOR = "execution(@com.safframework.aop.annotation.HookMethod *.new(..))";
+
+    @Pointcut(POINTCUT_METHOD)
+    public void methodAnnotatedWithTrace() {
     }
 
-    @Pointcut("@within(com.safframework.aop.annotation.HookMethod)||@annotation(com.safframework.aop.annotation.HookMethod)")
-    public void onHookMethod() {
+    @Pointcut(POINTCUT_CONSTRUCTOR)
+    public void constructorAnnotatedTrace() {
     }
 
-    private void hookMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
+    @Around("methodAnnotatedWithTrace() || constructorAnnotatedTrace()")
+    public void hookMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
 
