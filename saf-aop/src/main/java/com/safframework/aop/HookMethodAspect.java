@@ -26,14 +26,14 @@ public class HookMethodAspect {
     private static final String POINTCUT_CONSTRUCTOR = "execution(@com.safframework.aop.annotation.HookMethod *.new(..))";
 
     @Pointcut(POINTCUT_METHOD)
-    public void methodAnnotatedWithTrace() {
+    public void methodAnnotatedWithHookMethod() {
     }
 
     @Pointcut(POINTCUT_CONSTRUCTOR)
-    public void constructorAnnotatedTrace() {
+    public void constructorAnnotatedHookMethod() {
     }
 
-    @Around("methodAnnotatedWithTrace() || constructorAnnotatedTrace()")
+    @Around("methodAnnotatedWithHookMethod() || constructorAnnotatedHookMethod()")
     public void hookMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
