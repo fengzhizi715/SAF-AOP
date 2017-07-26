@@ -1,10 +1,10 @@
 # SAF-AOP
 
 [![@Tony沈哲 on weibo](https://img.shields.io/badge/weibo-%40Tony%E6%B2%88%E5%93%B2-blue.svg)](http://www.weibo.com/fengzhizi715)
-[![Download](https://img.shields.io/badge/Download-1.1.2-red.svg)](https://bintray.com/fengzhizi715/maven/saf-aop/_latestVersion)
-[![GitHub release](https://img.shields.io/badge/release-1.1.2-blue.svg)](https://github.com/fengzhizi715/SAF-AOP/releases)
+[![Download](https://img.shields.io/badge/Download-1.1.3-red.svg)](https://bintray.com/fengzhizi715/maven/saf-aop/_latestVersion)
+[![GitHub release](https://img.shields.io/badge/release-1.1.3-blue.svg)](https://github.com/fengzhizi715/SAF-AOP/releases)
 [![License](https://img.shields.io/badge/license-Apache%202-lightgrey.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
-<a href="http://www.methodscount.com/?lib=com.safframework%3Asaf-aop%3A1.1.2"><img src="https://img.shields.io/badge/Methods and size-core: 107 | deps: 43027 | 28 KB-e91e63.svg"/></a>
+<a href="http://www.methodscount.com/?lib=com.safframework%3Asaf-aop%3A1.1.3"><img src="https://img.shields.io/badge/Methods and size-core: 107 | deps: 43027 | 28 KB-e91e63.svg"/></a>
 
 ![](logo.png)
 
@@ -29,7 +29,7 @@ apply plugin: 'com.hujiang.android-aspectjx'
 ...
 
 dependencies {
-    compile 'com.safframework:saf-aop:1.1.2'
+    compile 'com.safframework:saf-aop:1.1.3'
     ...
 }
 ```
@@ -42,7 +42,7 @@ dependencies {
 | @Async        |借助rxjava,异步执行app中的方法|       |
 | @Cacheable    |Spring Cache风格的Cache注解,将结果放于缓存中|只适用于android4.0以后|
 | @LogMethod    |将方法的入参和出参都打印出来,可以用于调试|       |
-| @HookMethod   |可以在调用某个方法之前、以及之后进行hook|比较适合埋点的场景，可以单独使用也可以跟任何自定义注解配合使用|
+| @HookMethod   |可以在调用某个方法之前、以及之后进行hook|比较适合埋点的场景，可以单独使用也可以跟任何自定义注解配合使用。也支持在匿名内部类中使用|
 | @Prefs        |将方法返回的结果放入AppPrefs中|只适用于android4.0以后|
 | @Safe         |可以安全地执行方法,而无需考虑是否会抛出运行时异常|       |
 | @Trace        |用于追踪某个方法花费的时间,可以用于性能调优的评判|支持追踪匿名内部类中的方法       |
