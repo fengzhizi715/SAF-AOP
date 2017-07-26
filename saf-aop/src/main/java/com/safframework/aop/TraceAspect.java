@@ -1,5 +1,6 @@
 package com.safframework.aop;
 
+import com.safframework.aop.annotation.Trace;
 import com.safframework.log.L;
 import com.safframework.tony.common.utils.Preconditions;
 
@@ -30,6 +31,12 @@ public class TraceAspect {
     @Around("methodAnnotatedWithTrace() || constructorAnnotatedTrace()")
     public Object traceMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
+
+        Trace trace = methodSignature.getMethod().getAnnotation(Trace.class);
+        if (!trace.enable()) {
+            return joinPoint.proceed();
+        }
+
         String className = methodSignature.getDeclaringType().getSimpleName();
         String methodName = methodSignature.getName();
         final StopWatch stopWatch = new StopWatch();

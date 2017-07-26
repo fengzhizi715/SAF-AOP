@@ -13,4 +13,6 @@ import static java.lang.annotation.ElementType.METHOD;
 @Target({METHOD, CONSTRUCTOR})
 @Retention(RetentionPolicy.CLASS)
 public @interface Trace {
+
+    boolean enable() default true;
 }
