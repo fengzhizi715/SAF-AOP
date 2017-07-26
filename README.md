@@ -93,6 +93,34 @@ dependencies {
 ```
 
 
+@Trace还支持在匿名内部类中使用
+
+```java
+    @Trace
+    private void initData() {
+
+        Observable.create(new ObservableOnSubscribe<String>() {
+
+            @Trace
+            @Override
+            public void subscribe(@NonNull ObservableEmitter<String> e) throws Exception {
+
+                e.onNext("111");
+                e.onNext("222");
+                e.onNext("333");
+
+            }
+        }).subscribe(new Consumer<String>() {
+
+            @Trace
+            @Override
+            public void accept(@NonNull String str) throws Exception {
+
+            }
+        });
+    }
+```
+
 @HookMethod的使用方法:
 ---
 不写beforeMethod和afterMethod，则相当于没有使用@HookMethod<br>
