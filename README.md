@@ -17,7 +17,7 @@ buildscript {
          jcenter()
      }
      dependencies {
-         classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:1.0.8'
+         classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:1.0.10'
      }
  }
 ```
