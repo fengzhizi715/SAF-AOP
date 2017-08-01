@@ -33,7 +33,7 @@ public class TraceAspect {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
 
         Trace trace = methodSignature.getMethod().getAnnotation(Trace.class);
-        if (!trace.enable()) {
+        if (trace!=null && !trace.enable()) {
             return joinPoint.proceed();
         }
 
