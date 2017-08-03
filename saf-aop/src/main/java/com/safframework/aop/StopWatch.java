@@ -1,7 +1,5 @@
 package com.safframework.aop;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * Created by Tony Shen on 16/3/22.
  */
@@ -34,7 +32,12 @@ public class StopWatch {
         }
     }
 
-    public long getTotalTimeMillis() {
-        return (elapsedTime != 0) ? TimeUnit.NANOSECONDS.toMillis(endTime - startTime) : 0;
+    /**
+     * 返回花费的时间，单位是纳秒
+     * @return
+     */
+    public long getElapsedTime() {
+
+        return elapsedTime;
     }
 }

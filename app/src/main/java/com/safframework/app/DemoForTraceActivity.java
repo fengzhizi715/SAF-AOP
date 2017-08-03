@@ -24,7 +24,7 @@ public class DemoForTraceActivity extends Activity{
         initData();
     }
 
-    @Trace
+    @Trace(enable = false)
     private void initData() {
 
         Observable.create(new ObservableOnSubscribe<String>() {

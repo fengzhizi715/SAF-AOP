@@ -20,6 +20,8 @@ public class TraceAspect {
 
     private static final String POINTCUT_CONSTRUCTOR = "execution(@com.safframework.aop.annotation.Trace *.new(..))";
 
+    private static final int ns = 1000*1000;
+
     @Pointcut(POINTCUT_METHOD)
     public void methodAnnotatedWithTrace() {
     }
@@ -48,7 +50,7 @@ public class TraceAspect {
             className = "Anonymous class";
         }
 
-        L.i(className, buildLogMessage(methodName, stopWatch.getTotalTimeMillis()));
+        L.i(className, buildLogMessage(methodName, stopWatch.getElapsedTime()));
 
         return result;
     }
@@ -61,15 +63,14 @@ public class TraceAspect {
      * @return A string representing message.
      */
     private static String buildLogMessage(String methodName, long methodDuration) {
-        StringBuilder message = new StringBuilder();
-        message.append(methodName);
-        message.append("()");
-        message.append(" take ");
-        message.append("[");
-        message.append(methodDuration);
-        message.append("ms");
-        message.append("]");
 
-        return message.toString();
+        if (methodDuration > 10 * ns) {
+            return String.format("%s() take %d ms", methodName, methodDuration / ns);
+        } else if (methodDuration > ns) {
+            return String.format("%s() take %dms %dns", methodName, methodDuration / ns,
+                    methodDuration % ns);
+        } else {
+            return String.format("%s() take %dns", methodName, methodDuration % ns);
+        }
     }
 }
