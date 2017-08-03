@@ -3,7 +3,7 @@ SAF-AOP
 
 Version 1.1.4
 ---
-2017-07-25
+2017-08-03
  *  修复@HookMethod、@Trace在Android 7.0以上无法使用的bug
  *  @Trace增加时间的精度 精确到ns
 
