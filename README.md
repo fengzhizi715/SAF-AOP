@@ -139,6 +139,17 @@ Proguard
 -keep class com.safframework.aop.** { *; }
 ```
 
+联系方式
+===
+
+Wechat：fengzhizi715
+
+SAF-AOP相关文章：
+
+http://www.jianshu.com/p/9e78560cadad
+
+http://www.jianshu.com/p/2779e3bb1f14
+
 ChangeLog
 ===
 [版本更新记录](CHANGELOG.md)
