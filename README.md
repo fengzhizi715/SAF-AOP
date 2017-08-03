@@ -133,6 +133,40 @@ beforeMethod和afterMethod对应的都是方法名，分别表示在调用doSome
    }
 ```
 
+@HookMethod 同样支持在匿名内部类中使用
+
+```java
+    @HookMethod(beforeMethod = "method1",afterMethod = "method2")
+    private void initData() {
+
+        L.i("initData()");
+    }
+
+    private void method1() {
+        L.i("method1() is called before initData()");
+    }
+
+    private void method2() {
+        L.i("method2() is called after initData()");
+    }
+
+    private void testRx() {
+
+        Observable.just("tony")
+                .subscribe(new Consumer<String>() {
+
+                    @HookMethod(beforeMethod = "testRxBefore")
+                    @Override
+                    public void accept(@NonNull String s) throws Exception {
+                        System.out.println("s="+s);
+                    }
+
+                    private void testRxBefore() {
+                        L.i("testRxBefore() is called before accept()");
+                    }
+                });
+```
+
 Proguard
 ===
 ```java
