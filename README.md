@@ -2,9 +2,8 @@
 
 [![@Tony沈哲 on weibo](https://img.shields.io/badge/weibo-%40Tony%E6%B2%88%E5%93%B2-blue.svg)](http://www.weibo.com/fengzhizi715)
  [ ![Download](https://api.bintray.com/packages/fengzhizi715/maven/saf-aop/images/download.svg) ](https://bintray.com/fengzhizi715/maven/saf-aop/_latestVersion)
-[![GitHub release](https://img.shields.io/badge/release-1.1.4-red.svg)](https://github.com/fengzhizi715/SAF-AOP/releases)
 [![License](https://img.shields.io/badge/license-Apache%202-lightgrey.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
-<a href="http://www.methodscount.com/?lib=com.safframework%3Asaf-aop%3A1.1.4"><img src="https://img.shields.io/badge/Methods and size-core: 108 | deps: 43037 | 28 KB-e91e63.svg"/></a>
+<a href="http://www.methodscount.com/?lib=com.safframework%3Asaf-aop%3A1.2.0"><img src="https://img.shields.io/badge/Methods and size-core: 108 | deps: 923 | 29 KB-e91e63.svg"/></a>
 
 ![](logo.png)
 
@@ -17,7 +16,8 @@ buildscript {
          jcenter()
      }
      dependencies {
-         classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:1.0.10'
+         classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:1.1.1'
+         classpath 'org.aspectj:aspectjtools:1.8.13'
      }
  }
 ```
@@ -29,7 +29,7 @@ apply plugin: 'com.hujiang.android-aspectjx'
 ...
 
 dependencies {
-    compile 'com.safframework:saf-aop:1.1.4'
+    compile 'com.safframework:saf-aop:1.2.0'
     ...
 }
 ```

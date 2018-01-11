@@ -1,6 +1,12 @@
 SAF-AOP
 ===
 
+Version 1.2.0
+---
+2018-01-11
+ *  Android Studio升级到3.x，gradle版本升级到4.1  
+ *  RxJava升级到2.1.8
+
 Version 1.1.4
 ---
 2017-08-03
