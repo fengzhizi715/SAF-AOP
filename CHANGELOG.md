@@ -1,6 +1,13 @@
 SAF-AOP
 ===
 
+Version 1.2.1
+---
+2018-05-27
+ *  日志框架升级到1.5.3
+ *  RxJava升级到2.1.14
+ *  更新library的AndroidManifest.xml,去掉android:allowBackup="true"
+
 Version 1.2.0
 ---
 2018-01-11

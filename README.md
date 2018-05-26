@@ -29,7 +29,7 @@ apply plugin: 'com.hujiang.android-aspectjx'
 ...
 
 dependencies {
-    compile 'com.safframework:saf-aop:1.2.0'
+    compile 'com.safframework:saf-aop:1.2.1'
     ...
 }
 ```
