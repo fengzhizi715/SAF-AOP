@@ -50,7 +50,6 @@ dependencies {
 
     implementation project(':saf-aop')
 
-    implementation 'org.aspectj:aspectjrt:1.8.+'
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.1.14'
     implementation 'com.safframework.log:saf-log:1.5.3'

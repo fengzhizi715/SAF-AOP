@@ -1,7 +1,5 @@
 package com.safframework.aop;
 
-import android.annotation.TargetApi;
-
 import com.safframework.aop.annotation.Prefs;
 import com.safframework.prefs.AppPrefs;
 
@@ -16,7 +14,6 @@ import java.lang.reflect.Method;
 /**
  * Created by Tony Shen on 16/3/28.
  */
-@TargetApi(14)
 @Aspect
 public class PrefsAspect {
 

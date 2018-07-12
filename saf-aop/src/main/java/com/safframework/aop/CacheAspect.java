@@ -1,7 +1,5 @@
 package com.safframework.aop;
 
-import android.annotation.TargetApi;
-
 import com.safframework.aop.annotation.Cacheable;
 import com.safframework.cache.Cache;
 
@@ -17,7 +15,6 @@ import java.lang.reflect.Method;
 /**
  * Created by Tony Shen on 16/3/23.
  */
-@TargetApi(14)
 @Aspect
 public class CacheAspect {
 
