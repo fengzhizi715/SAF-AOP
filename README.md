@@ -16,7 +16,7 @@ buildscript {
          jcenter()
      }
      dependencies {
-         classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:1.1.1'
+         classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.1'
          classpath 'org.aspectj:aspectjtools:1.8.13'
      }
  }
@@ -29,7 +29,7 @@ apply plugin: 'com.hujiang.android-aspectjx'
 ...
 
 dependencies {
-    compile 'com.safframework:saf-aop:1.2.1'
+    compile 'com.safframework:saf-aop:1.2.2'
     ...
 }
 ```
