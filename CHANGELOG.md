@@ -1,6 +1,12 @@
 SAF-AOP
 ===
 
+Version 1.2.2
+---
+2018-07-12
+ *  gradle-android-plugin-aspectjx 升级到2.0.1
+ *  修复@Cacheable、@Prefs 在gradle-android-plugin-aspectjx最新版无法使用到bug
+
 Version 1.2.1
 ---
 2018-05-27
