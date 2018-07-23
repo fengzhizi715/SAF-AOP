@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202-lightgrey.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 <a href="http://www.methodscount.com/?lib=com.safframework%3Asaf-aop%3A1.2.0"><img src="https://img.shields.io/badge/Methods and size-core: 108 | deps: 923 | 29 KB-e91e63.svg"/></a>
 
-基于 Aspecj 实现的 AOP 框架，并使用沪江的gradle 插件：https://github.com/HujiangTechnology/gradle_plugin_android_aspectjx
+基于 Aspecj 实现的 Android AOP 框架，并使用沪江的gradle 插件：https://github.com/HujiangTechnology/gradle_plugin_android_aspectjx
 
 
 ![](logo.png)
