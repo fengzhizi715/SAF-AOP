@@ -189,6 +189,12 @@ http://www.jianshu.com/p/9e78560cadad
 
 http://www.jianshu.com/p/2779e3bb1f14
 
+
+> Java与Android技术栈：每周更新推送原创技术文章，欢迎扫描下方的公众号二维码并关注，期待与您的共同成长和进步。
+
+![](https://user-gold-cdn.xitu.io/2018/7/24/164cc729c7c69ac1?w=344&h=344&f=jpeg&s=9082)
+
+
 ChangeLog
 ===
 [版本更新记录](CHANGELOG.md)
