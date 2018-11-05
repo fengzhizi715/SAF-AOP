@@ -29,7 +29,7 @@ public class SafeAspect {
 
         Object result = null;
         try {
-            result = joinPoint.proceed(joinPoint.getArgs());
+            result = joinPoint.proceed();
         } catch (Throwable e) {
             L.w(getStringFromException(e));
         }
