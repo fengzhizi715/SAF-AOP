@@ -16,16 +16,14 @@ import java.io.StringWriter;
 @Aspect
 public class SafeAspect {
 
-    @Around("execution(!synthetic * *(..)) && onSafe()")
-    public Object doSafeMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
-        return safeMethod(joinPoint);
+    private static final String POINTCUT_METHOD = "execution(@com.safframework.aop.annotation.Safe * *(..))";
+
+    @Pointcut(POINTCUT_METHOD)
+    public void methodAnnotatedWithSafe() {
     }
 
-    @Pointcut("@within(com.safframework.aop.annotation.Safe)||@annotation(com.safframework.aop.annotation.Safe)")
-    public void onSafe() {
-    }
-
-    private Object safeMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
+    @Around("methodAnnotatedWithSafe()")
+    public Object safeMethod(final ProceedingJoinPoint joinPoint) throws Throwable {
 
         Object result = null;
         try {
