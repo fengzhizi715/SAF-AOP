@@ -1,6 +1,11 @@
 SAF-AOP
 ===
 
+Version 1.2.3
+---
+2018-11-05
+ *  gradle-android-plugin-aspectjx 升级到2.0.2
+
 Version 1.2.2
 ---
 2018-07-12
