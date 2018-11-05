@@ -33,7 +33,7 @@ apply plugin: 'com.hujiang.android-aspectjx'
 ...
 
 dependencies {
-    compile 'com.safframework:saf-aop:1.2.4'
+    compile 'com.safframework:saf-aop:1.2.5'
     ...
 }
 ```
@@ -48,7 +48,7 @@ dependencies {
 | @LogMethod    |将方法的入参和出参都打印出来,可以用于调试|       |
 | @HookMethod   |可以在调用某个方法之前、以及之后进行hook|比较适合埋点的场景，可以单独使用也可以跟任何自定义注解配合使用。也支持在匿名内部类中使用|
 | @Prefs        |将方法返回的结果放入AppPrefs中|只适用于android4.0以后|
-| @Safe         |可以安全地执行方法,而无需考虑是否会抛出运行时异常|       |
+| @Safe         |可以安全地执行方法,而无需考虑是否会抛出运行时异常|支持在捕获异常的时候进行监听|
 | @Trace        |用于追踪某个方法花费的时间,可以用于性能调优的评判|支持追踪匿名内部类中的方法       |
 
 
