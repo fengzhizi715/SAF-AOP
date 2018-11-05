@@ -17,7 +17,7 @@ ext {
             rxjava                    : "2.2.3",
 
             saf_log                   : "1.5.4",
-            saf_cache                 : "1.1.0",
+            saf_cache                 : "1.1.1",
 
             tony_common_utils         : "1.2.6"
     ]
