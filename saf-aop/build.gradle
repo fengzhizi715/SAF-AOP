@@ -2,13 +2,16 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.hujiang.android-aspectjx'
 apply plugin: 'com.novoda.bintray-release'
 
+def cfg = rootProject.ext.configuration // 配置
+def libs = rootProject.ext.libraries // 库
+
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.2'
+    compileSdkVersion cfg.compileVersion
+    buildToolsVersion cfg.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 27
+        minSdkVersion cfg.minSdk
+        targetSdkVersion cfg.targetSdk
         versionCode 1
         versionName "1.0"
 
@@ -30,13 +33,13 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compileOnly 'com.android.support:appcompat-v7:27.0.2'
+    compileOnly "com.android.support:appcompat-v7:${libs.supportVersion}"
     testImplementation 'junit:junit:4.12'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
-    implementation 'com.safframework.log:saf-log:1.5.3'
-    implementation 'com.safframework:saf-cache:1.1.0'
-    implementation 'tony-common:tony-common-utils:1.2.5'
+    implementation "io.reactivex.rxjava2:rxandroid:${libs.rxandroid}"
+    implementation "io.reactivex.rxjava2:rxjava:${libs.rxjava}"
+    implementation "com.safframework.log:saf-log:${libs.saf_log}"
+    implementation "com.safframework:saf-cache:${libs.saf_cache}"
+    implementation "tony-common:tony-common-utils:${libs.tony_common_utils}"
 }
 
 repositories {

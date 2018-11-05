@@ -1,4 +1,27 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    configuration = [
+            package          : "com.safframework.app",
+            buildToolsVersion: "27.0.2",
+            compileVersion   : 27,
+            minSdk           : 15,
+            targetSdk        : 27,
+            version_code     : 1,
+            version_name     : "0.0.1"
+    ]
+
+    libraries = [
+            supportVersion            : "27.0.0",
+
+            rxandroid                 : "2.0.1",
+            rxjava                    : "2.2.3",
+
+            saf_log                   : "1.5.4",
+            saf_cache                 : "1.1.0",
+
+            tony_common_utils         : "1.2.6"
+    ]
+}
 
 buildscript {
 
