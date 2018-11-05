@@ -40,6 +40,8 @@ dependencies {
     implementation "com.safframework.log:saf-log:${libs.saf_log}"
     implementation "com.safframework:saf-cache:${libs.saf_cache}"
     implementation "tony-common:tony-common-utils:${libs.tony_common_utils}"
+
+    implementation 'org.aspectj:aspectjrt:1.8.+'
 }
 
 repositories {
@@ -63,7 +65,7 @@ publish{
     userOrg = 'fengzhizi715'
     groupId = 'com.safframework'
     artifactId = 'saf-aop'
-    publishVersion = '1.2.3'
+    publishVersion = '1.2.4'
     desc = 'this is an aop library for android'
     website = 'https://github.com/fengzhizi715/SAF-AOP'
 }
