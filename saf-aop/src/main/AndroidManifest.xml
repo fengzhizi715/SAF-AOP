@@ -1,2 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="aop.safframework.com.saf_aop_annotations" />
+    package="com.safframework.aop" >
+
+    <application>
+        <activity
+            android:name=".PermissionActivity"
+            android:theme="@android:style/Theme.Translucent" />
+    </application>
+</manifest>

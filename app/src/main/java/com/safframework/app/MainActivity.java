@@ -1,9 +1,13 @@
 package com.safframework.app;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import com.safframework.aop.annotation.Permission;
 import com.safframework.injectview.Injector;
 import com.safframework.injectview.annotations.OnClick;
 
@@ -67,5 +71,15 @@ public class MainActivity extends Activity {
 
         Intent i = new Intent(MainActivity.this,DemoForTraceActivity.class);
         startActivity(i);
+    }
+
+    @SuppressLint("MissingPermission")
+    @Permission({Manifest.permission.CALL_PHONE})
+    @OnClick(id={R.id.text8})
+    void clickText8() {
+
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:" + "10000"));
+        startActivity(intent);
     }
 }

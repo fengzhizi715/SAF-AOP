@@ -56,4 +56,6 @@
             android:screenOrientation="portrait"/>
     </application>
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
 </manifest>
