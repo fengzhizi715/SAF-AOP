@@ -1,6 +1,11 @@
 SAF-AOP
 ===
 
+Version 1.3.0
+---
+2018-11-05
+ *  增加@Permission
+
 Version 1.2.4
 ---
 2018-11-05
